@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+	<Resource	
+				name="jdbc/datasource" 
+				auth="Container" 
+				type="javax.sql.DataSource"
+				defaultAutoCommit='false'
+				maxActive="50"
+				maxIdle="10" 
+				maxWait="10"
+				initialSize="10"
+				clearReferencesStopThreads = "true"
+				driverClassName="com.mysql.cj.jdbc.Driver"
+				validationQuery="SELECT 'OK'"
+				testWhileIdle="true"
+           		testOnBorrow="true"
+           		numTestsPerEvictionRun="5"
+                timeBetweenEvictionRunsMillis="5000"
+                minEvictableIdleTimeMillis="60000"
+				antiJARLocking="false"
+                antiResourceLocking="false"
+				username="root" 
+				password="nanuko135" 
+				url="jdbc:mysql://localhost:3306/caixaqui?useSSL=false&amp;serverTimezone=UTC"/>
+<!-- Classe do tomcat que está lendo esse arquivo é org.apache.tomcat.dbcp.dbcp.PoolingDataSource -->				
+<!-- POOL DE CONEXÕES -->
+<!-- https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html -->
+</Context>
